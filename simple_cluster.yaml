@@ -1,0 +1,15 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: simple-cluster
+  region: eu-west-1
+
+nodeGroups:
+  - name: ng-1
+    instanceType: m5.large
+    desiredCapacity: 1
+    privateNetworking: true
+    availabilityZones: ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
+    ssh:
+      publicKeyPath: ~/.ssh/eksctl_pub
