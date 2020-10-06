@@ -2,7 +2,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: cluster-11
+  name: logging-cluster
   region: eu-west-1
 
 nodeGroups:

@@ -4,6 +4,7 @@ kind: ClusterConfig
 metadata:
   name: as-cluster
   region: eu-west-1
+  version: '1.17'
 
 nodeGroups:
   - name: ng-1
@@ -18,8 +19,6 @@ nodeGroups:
     volumeSize: 50
     labels: { role: workers }
     privateNetworking: true
-    ssh:
-      publicKeyPath: ~/.ssh/eksctl_pub
     availabilityZones: ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
 
 

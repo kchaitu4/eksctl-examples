@@ -2,14 +2,14 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: simple-cluster
+  name: simple-cluster-upgrade
   region: eu-west-1
-  version: '1.17'
+  version: '1.16'
 
 nodeGroups:
-  - name: ng-1
+  - name: ng-1-pre-upg
     instanceType: m5.large
     desiredCapacity: 1
     privateNetworking: true
     availabilityZones: ["eu-west-1a", "eu-west-1b", "eu-west-1c"]
-    labels: { tier: new }
+    labels: { tier: old }
